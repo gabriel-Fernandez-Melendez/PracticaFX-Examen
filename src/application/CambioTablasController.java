@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -61,13 +62,15 @@ public class CambioTablasController extends AnchorPane implements Initializable 
 
     //funciona, lo importante seria recordar que tengo que mostrar un  argumento de algun tipo , en clase probar a meter un fxml que yo haya hecho 
     @FXML
-    private void Modificar() {
+    private void Modificar() throws IOException {
     	System.out.println("si ");
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("Emergente.fxml"));
+        Parent root = loader.load();
     	 Stage childStage = new Stage();
          childStage.setTitle("Child Window");
          childStage.initModality(Modality.WINDOW_MODAL); // Block parent window
          childStage.initOwner(escenario); // Set parent reference
-         childStage.setScene(new Scene(new Label("Child Content"), 200, 200));
+         childStage.setScene(new Scene(root));
          childStage.show();
     }
     
