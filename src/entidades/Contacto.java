@@ -4,29 +4,43 @@ import java.time.LocalDate;
 
 public class Contacto {
 
-	private String nombre;
-	private String telefono;
-	private String email;
-	private String genero;
-	private String grupo;
+	public String nombre;
+	public String telefono;
+	public String email;
+	public LocalDate fechanac;
+	
+	
+	
+	
+	//private String genero;
+	//private String grupo;
 	private boolean favorito;
-	private String notas;
-	private LocalDate fechanac;
+	//private String notas;
 	
 	public Contacto() {
 		
 	}
 	
-	public Contacto(String nombre, String telefono, String email, String genero, String grupo, boolean favorito,
-			String notas, LocalDate fechanac) {
+	
+	public Contacto(String nombre, String telefono, String email, LocalDate fechanac) {
 		super();
 		this.nombre = nombre;
 		this.telefono = telefono;
 		this.email = email;
-		this.genero = genero;
-		this.grupo = grupo;
+		this.fechanac = fechanac;
+	}
+
+
+	public Contacto(String nombre, String telefono, String email, boolean favorito,
+			 LocalDate fechanac) {
+		super();
+		this.nombre = nombre;
+		this.telefono = telefono;
+		this.email = email;
+		//this.genero = genero;
+		//this.grupo = grupo;
 		this.favorito = favorito;
-		this.notas = notas;
+		//this.notas = notas;
 		this.fechanac = fechanac;
 	}
 	
@@ -54,21 +68,6 @@ public class Contacto {
 		this.email = email;
 	}
 
-	public String getGenero() {
-		return genero;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-
-	public String getGrupo() {
-		return grupo;
-	}
-
-	public void setGrupo(String grupo) {
-		this.grupo = grupo;
-	}
 
 	public boolean isFavorito() {
 		return favorito;
@@ -78,13 +77,6 @@ public class Contacto {
 		this.favorito = favorito;
 	}
 
-	public String getNotas() {
-		return notas;
-	}
-
-	public void setNotas(String notas) {
-		this.notas = notas;
-	}
 
 	public LocalDate getFechanac() {
 		return fechanac;
@@ -97,7 +89,7 @@ public class Contacto {
 	//forma en la que almaceno los contactos
 	@Override
 	public String toString() {
-		return" "+ getNombre()+" "+getTelefono()+" "+getEmail()+" "+getGenero()+" "+getGrupo()+" "+isFavorito()+" "+getNotas()+" "+getFechanac().toString();
+return "nombre 	: "+nombre+" "+email+" "+fechanac;
 	}
 	
 }

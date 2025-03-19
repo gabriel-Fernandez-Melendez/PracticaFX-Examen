@@ -8,7 +8,7 @@
 
 <!--  NUNCA OLVIDAR IMPLEMENTAR EL CONTROLLER EN LA LINEA RAIZ DEL FXML  -->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="588.0" type="AnchorPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <BorderPane fx:id="mainPane" prefHeight="579.0" prefWidth="588.0">
          <top>
@@ -16,10 +16,10 @@
               <menus>
                 <Menu text="_Archivo">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#P_Datos" text="datos" />
-                        <MenuItem mnemonicParsing="false" onAction="#P_Tablas" text="Cambiotablas" />
+                    <MenuItem fx:id="boton" mnemonicParsing="false" onAction="#P_Datos" text="datos" />
+                        <MenuItem mnemonicParsing="false" text="Editar Contacto" />
                         <MenuItem mnemonicParsing="false" text="Exportar Contacto" />
-                        <MenuItem mnemonicParsing="false" text="Salir" />
+                        <MenuItem mnemonicParsing="false" onAction="#P_Salir" text="Salir" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Ver">
@@ -33,4 +33,4 @@
          </top>
       </BorderPane>
    </children>
-</AnchorPane>
+</fx:root>

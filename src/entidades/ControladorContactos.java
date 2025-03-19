@@ -66,8 +66,8 @@ public class ControladorContactos {
 				String notas_ad = String.valueOf(contacto[7]);
 				String fechanac = String.valueOf(contacto[8]);
 				LocalDate fecha = LocalDate.parse(fechanac);
-				con=new Contacto(nombre,telefono,email,genero,grupo,fav,notas_ad,fecha);
-				contactos.add(con);					
+				//con=new Contacto(nombre,telefono,email,genero,grupo,fav,notas_ad,fecha);
+				//contactos.add(con);					
 			}
 			 buffer.close();
 		     lector.close();
@@ -111,8 +111,8 @@ public class ControladorContactos {
 				String notas_ad = String.valueOf(contacto[7]);
 				String fechanac = String.valueOf(contacto[8]);
 				LocalDate fecha = LocalDate.parse(fechanac);
-				con=new Contacto(nombre,telefono,email,genero,grupo,fav,notas_ad,fecha);
-				contactos.add(con);		
+				//con=new Contacto(nombre,telefono,email,genero,grupo,fav,notas_ad,fecha);
+				//contactos.add(con);		
 				}								
 			}
 			 buffer.close();
