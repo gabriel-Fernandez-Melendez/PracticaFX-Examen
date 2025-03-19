@@ -22,7 +22,7 @@ public class EmergenteController {
 	@FXML
 	private void MetodoAlerta() {
 		System.out.println("entro");
-		mostrarAlerta("prueba sin confirmacion","funciona",AlertType.INFORMATION);
+		mostrarAlerta("prueba sin confirmacion","funciona ",AlertType.INFORMATION);
 	}
 	
 	private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
