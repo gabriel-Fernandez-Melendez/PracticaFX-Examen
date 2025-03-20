@@ -23,6 +23,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+//recuerda! Error occurred during initialization of boot layer
+//java.lang.module.FindException: Module javafx.controls not found, required by agendaFX_GabrielFernandez
+
 public class CambioTablasController extends AnchorPane implements Initializable {
     @FXML
     private TableColumn<Contacto,LocalDate> fecha;
